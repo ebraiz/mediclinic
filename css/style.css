@@ -928,10 +928,9 @@ a.link-under:hover {
 }
 
 .page-header__title {
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 0;
-  font-size: 1.75rem;
-  line-height: 1.16667em;
+  font-size: 2rem;
   color: var(--black-color-1);
 }
 
@@ -1083,6 +1082,26 @@ a.link-under:hover {
 .button-two-gradient:active {	
   border-color: var(--primary-two-gradient-color);	
   background: var(--primary-two-gradient-color);	
+}	
+
+.button--cancel{
+  background-color: transparent;
+  border: 1px solid var(--black-color);
+  height: 55px;
+}
+
+.button--cancel:hover {	
+  border-color: var(--black-color);	
+  background: var(--black-color);	
+  color: var(--white-color);	
+  -webkit-box-shadow: 0 5px 15px rgba(0, 129, 255, 0),	
+      0 15px 40px rgba(0, 129, 255, 0);	
+  box-shadow: 0 5px 15px rgba(0, 129, 255, 0),	
+      0 15px 40px rgba(0, 129, 255, 0);	
+}	
+.button--cancel:active {	
+  border-color: var(--black-color);	
+  background: var(--black-color);	
 }	
 
 html .button--secondary:hover {
@@ -3162,7 +3181,6 @@ html .button--secondary:hover {
   padding: 15px;	
   border: 1px solid #EAEDF0;	
   border-radius: 8px;	
-  margin-bottom: 10px;
 }
 
 .card--content-center .card__container {
@@ -5914,7 +5932,7 @@ textarea.input, .input-group .select2-container textarea.select2-selection--sing
   background-color: #11B3D8;
   padding: 25px 6rem;
   position: relative;
-  z-index: 9999;
+  z-index: 1010;
 }
 
 .page-footer p{
@@ -5939,7 +5957,7 @@ textarea.input, .input-group .select2-container textarea.select2-selection--sing
   width: 100%;
   max-width: calc(100% - var(--sidebar-full-width));
   padding-top: calc(var(--header-height) + 3.875rem);
-  padding-bottom: 2.5333rem;
+  padding-bottom: 8rem;
   -webkit-transition: var(--t-base);
   transition: var(--t-base);
   -webkit-transition-timing-function: linear;
@@ -8383,6 +8401,8 @@ span.flatpickr-weekday {
   background-color: var(--background-secondary-color);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(169, 194, 209, 0.05)) drop-shadow(0px 8px 16px rgba(169, 194, 209, 0.1));
           filter: drop-shadow(0px 4px 4px rgba(169, 194, 209, 0.05)) drop-shadow(0px 8px 16px rgba(169, 194, 209, 0.1));
+  position: relative;
+  z-index: -1;
 }
 
 .pagination__item {
@@ -10801,7 +10821,18 @@ span.flatpickr-weekday {
 
 .consultant_button button{	
   padding: 0 3rem;	
+  border-radius: 8px;
+}
+
+.consult_button{	
+  text-align: right;	
+  margin-top: 0;
+}
+
+.consult_button button{	
+  padding: 0 3rem;	
   border-radius: 8px;	
+  margin-left: 10px;
 }
 
 .customer-account__item-1 .card__container{	
@@ -15854,6 +15885,7 @@ ul.customer-shipping__list li:not(:last-child){
 
 .addPatientModal .modal__footer-buttons {
   grid-template-columns: repeat(3, auto);
+  gap: 10px;
 }
 
 .addPatientModal .card__header{
@@ -15874,11 +15906,6 @@ ul.customer-shipping__list li:not(:last-child){
 .addPatientModal .input-group .select2-container .select2-selection--single{
   height: 45px;
   border-radius: 8px;
-}
-
-.addPatientModal .modal__footer-button .button--cancel{
-  background-color: transparent;
-  border: 1px solid #EAEDF0;
 }
 
 .addPatientModal .modal__footer-button .button--opd{
@@ -15922,3 +15949,138 @@ ul.customer-shipping__list li:not(:last-child){
 }
 
 /* Add Patient Modal CSS ends here */
+
+/* Consulation Observation starts here */
+
+.consulation_header{
+  padding: 20px;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-column-gap: 15px;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  z-index: 1;
+}
+
+.consulation_header li{
+  font-size: 14px;
+  font-weight: 500;
+  color: #303D4D;
+}
+
+.consulation_header li span{
+  font-size: 12px;
+  display: block;
+  text-transform: uppercase;
+  color: #8697A8;
+  margin-bottom: 2px;
+}
+
+.consulation_header li span.consult_name{
+  color: #303D4D;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.consulation_header li span.consult_photo{
+  width: 52px;
+  margin: 0 auto;
+}
+
+.consulation_header img{
+  width: 100%;
+  border-radius: 100%;
+}
+
+.consultation_tabs{
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+  border-bottom: 1px solid #D5D5D5;
+  margin-top: 50px;
+}
+
+.consultation_tabs li:first-child{
+  color: #303D4D;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 30px;
+}
+
+.consultation_tabs li button{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 25px;
+  color: #6C7A87;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+
+.consultation_tabs li button > svg{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.consultation_tabs li button:hover{
+  color: #0593FF;
+}
+
+.consultation_tabs li button:hover::before{
+  content: "";
+  position: absolute;
+  right:0;
+  left: 0;
+  bottom: 0;
+  color: #0593FF;
+  height: 2px;
+  width: 100%;
+  background-color: #0593FF;
+}
+
+.temperature_box .form-group{
+  position: relative;
+  z-index: 1;
+}
+
+.temperature_box .input-group{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.temperature_box .input-group span,
+.temperature_box label{
+  color: #3B4756;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.temperature_box .input-group input[type="number"]{
+  width: 30%;
+}
+
+.consultation_content .card h5{
+  color: #303D4D;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.consultation_content .table th, 
+.consultation_content .table td {
+  padding: 10px 0.75rem;
+}
+/* Consulation Observation ends here */
