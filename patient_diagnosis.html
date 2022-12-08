@@ -552,7 +552,7 @@
             <div class="sidebar__backdrop"></div>
             <div class="sidebar__container">
                 <div class="sidebar__top">
-                    <a class="sidebar__logo" href="index.html">
+                    <a class="sidebar__logo" onclick="javascript:location.href = 'login.html'">
                         <img class="sidebar__logo-icon" src="img/dashboard_logo.png" alt="dashboard logo" />
                         <div class="sidebar__logo-text">MediClinic<span>EMR</span></div>
                     </a>
@@ -693,7 +693,7 @@
                 </div>
                 <div class="patient_consultation">
                     <div class="row justify-content-between align-items-center">
-                        <div class="col-8">
+                        <div class="col-sm-8 col-12">
                             <div class="card p-0">
                                 <ul class="consulation_header">
                                     <li>
@@ -719,7 +719,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4 col-12">
                             <div class="consult_button">
                                 <button class="button button-two-gradient" type="button">
                                     <span class="button__text">Save</span>
@@ -735,7 +735,7 @@
                     <ul class="consultation_tabs">
                         <li>consultation details</li>
                         <li>
-                            <button>
+                            <button onclick="javascript:location.href = 'patient_observations.html'">
                                 <svg class="icon-icon-observation">
                                     <use xlink:href="#icon-observation"></use>
                                 </svg>
@@ -743,7 +743,7 @@
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onclick="javascript:location.href = 'patient_diagnosis.html'">
                                 <svg class="icon-icon-diagnosis">
                                     <use xlink:href="#icon-diagnosis"></use>
                                 </svg>
@@ -823,7 +823,7 @@
                                                         <label class="custom-control-label" for="customRadio1">Primary</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" class="custom-control-input" id="customRadio2" name="example2">
+                                                        <input type="radio" class="custom-control-input" id="customRadio2" name="example1">
                                                         <label class="custom-control-label" for="customRadio2">Secondary</label>
                                                     </div>
                                                 </td>
@@ -833,16 +833,16 @@
                                                         <label class="custom-control-label" for="customRadio3">Confirmed</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" class="custom-control-input" id="customRadio4" name="example4">
+                                                        <input type="radio" class="custom-control-input" id="customRadio4" name="example3">
                                                         <label class="custom-control-label" for="customRadio4">Presumed</label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="input-group">
-                                                        <label class="checkbox-toggle is-active">
+                                                        <button class="checkbox-toggle" id="toggle1">
                                                             <input type="checkbox" checked="">
                                                             <span class="checkbox-toggle__range"></span>
-                                                        </label>
+                                                        </button>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -883,7 +883,7 @@
                                                         <label class="custom-control-label" for="customRadio5">Primary</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" class="custom-control-input" id="customRadio6" name="example6">
+                                                        <input type="radio" class="custom-control-input" id="customRadio6" name="example5">
                                                         <label class="custom-control-label" for="customRadio6">Secondary</label>
                                                     </div>
                                                 </td>
@@ -893,16 +893,16 @@
                                                         <label class="custom-control-label" for="customRadio7">Confirmed</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" class="custom-control-input" id="customRadio8" name="example8">
+                                                        <input type="radio" class="custom-control-input" id="customRadio8" name="example7">
                                                         <label class="custom-control-label" for="customRadio8">Presumed</label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="input-group">
-                                                        <label class="checkbox-toggle is-active">
+                                                        <button class="checkbox-toggle" id="toggle2">
                                                             <input type="checkbox" checked="">
                                                             <span class="checkbox-toggle__range"></span>
-                                                        </label>
+                                                        </button>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -931,6 +931,16 @@
     <script src="js/vendor/simplebar.min.js"></script>
     <script src="js/components.js"></script>
     <script src="js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#toggle1").click(function(){
+                $("#toggle1").toggleClass("is-active");
+            });
+            $("#toggle2").click(function(){
+                $("#toggle2").toggleClass("is-active");
+            });
+        });
+    </script>
 </body>
 
 </html>

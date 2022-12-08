@@ -552,7 +552,7 @@
             <div class="sidebar__backdrop"></div>
             <div class="sidebar__container">
                 <div class="sidebar__top">
-                    <a class="sidebar__logo" href="index.html">
+                    <a class="sidebar__logo" onclick="javascript:location.href = 'login.html'">
                         <img class="sidebar__logo-icon" src="img/dashboard_logo.png" alt="dashboard logo" />
                         <div class="sidebar__logo-text">MediClinic<span>EMR</span></div>
                     </a>
@@ -693,7 +693,7 @@
                 </div>
                 <div class="patient_consultation">
                     <div class="row justify-content-between align-items-center">
-                        <div class="col-8">
+                        <div class="col-sm-8 col-12">
                             <div class="card p-0">
                                 <ul class="consulation_header">
                                     <li>
@@ -719,7 +719,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4 col-12">
                             <div class="consult_button">
                                 <button class="button button-two-gradient" type="button">
                                     <span class="button__text">Save</span>
@@ -732,10 +732,10 @@
                     </div>
                 </div>
                 <div class="consultation_details">
-                    <ul class="consultation_tabs">
+                    <ul class="nav nav-tabs consultation_tabs">
                         <li>consultation details</li>
                         <li>
-                            <button>
+                            <button onclick="javascript:location.href = 'patient_observations.html'">
                                 <svg class="icon-icon-observation">
                                     <use xlink:href="#icon-observation"></use>
                                 </svg>
@@ -743,7 +743,7 @@
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onclick="javascript:location.href = 'patient_diagnosis.html'">
                                 <svg class="icon-icon-diagnosis">
                                     <use xlink:href="#icon-diagnosis"></use>
                                 </svg>
@@ -798,7 +798,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-sm-4 col-12">
                                 <div class="card py-0">
                                     <div class="card__wrapper temperature_box">
                                         <div class="form-group">
@@ -828,12 +828,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-8">
+                            <div class="col-sm-8 col-12">
                                 <div class="card py-0">
                                     <h5>Blood Pressure</h5>
                                     <div class="row">
-                                        <div class="col">
-                                            <div class="card__wrapper temperature_box pr-0 pt-4">
+                                        <div class="col-sm-6 col-12">
+                                            <div class="card__wrapper temperature_box pr-sm-0 pt-sm-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Systolic (mm Hg)</label>
                                                     <div class="input-group">
@@ -862,8 +862,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="card__wrapper temperature_box pl-0 pt-4">
+                                        <div class="col-sm-6 col-12">
+                                            <div class="card__wrapper temperature_box pl-sm-0 pt-sm-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Diastolic (mm Hg)</label>
                                                     <div class="input-group">
